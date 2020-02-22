@@ -5,15 +5,18 @@
 	#outline: solid red 1px;
 }
 
+title {
+	display: none;
+}
+
 body {
-  min-width: 320px;
+  #min-width: 320px;
   font-family: Open Sans, Arial, Helvetica, sans-serif;
 }
 
 img {
   width: 100%;
   height: auto;
-  margin: auto;
 }
 
 svg {
@@ -127,11 +130,11 @@ section {
 }
 
 .athlets .section-title::after {
-	background-image: url("/images/img/footballer_192.png");
+	background-image: url("../images/img/footballer_192.png");
 }
 
 .players .section-title::after {
-	background-image: url("/images/img/basketballer_302.png");
+	background-image: url("../images/img/basketballer_302.png");
 }
 
 article {
