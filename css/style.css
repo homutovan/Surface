@@ -61,9 +61,9 @@ h1 {
 .page-header,
 .page-footer {
 	position: relative;
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 100%;
+	background-position: center;
 }
 
 .page-header::after,
@@ -79,7 +79,8 @@ h1 {
 }
 
 .container {
-	position: relative;
+  position: relative;
+  max-width: 2048px;
 	z-index: 1;
 }
 
@@ -100,7 +101,7 @@ h1 {
 
 .button {
 	display: flex;
-	background-color: #5e42b0;
+	background-image: radial-gradient(#51389c, #7655d5);
 	color: #ffffff;
 }
 
@@ -164,6 +165,10 @@ section {
 	border-bottom-color: #efefef ;
 }
 
+.image-wrapper {
+	overflow: hidden;
+}
+
 .activity .article-title::before{
 	z-index: 1;
 	color: #f5f6f7;
@@ -177,11 +182,11 @@ section {
 }
 
 .button-logo {
-	background-color: #5e42b0;
-	border-radius: 23%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	background-image: radial-gradient(#51389c, #7655d5);
+	border-radius: 23%;
 }
 
 .page-footer h2 {
@@ -256,7 +261,7 @@ section {
 	.section-title::after {
 		width: 200px;
 		height: 280px;
-		bottom: -290px;
+		bottom: -55px;
 		right: 15%;
 	}
 	
@@ -265,9 +270,9 @@ section {
 	}
 	
 	.players .section-title::after {
-		background-image: url("../images/img/basketballer_302.png");
 		width: 300px;
 		right: 1%;
+		background-image: url("../images/img/basketballer_302.png");
 	}
 	
 	.feature {
@@ -680,29 +685,26 @@ section {
 
 	.activity article {
 		display: flex;
+		justify-content: center;
 	}
 
 	.activity article:nth-child(2n) {
 		flex-direction: row-reverse;
 	}
 
-	.image-wrapper {
-		width: 50%;
-		overflow: hidden;
-	}
-
 	.activity .article-content {
-		padding-top:270px;
-		padding-bottom: 98px;
-		padding-left: 120px;
+		padding-top: 14.06%;                        /* 270px */
+		padding-bottom: 12.76%;											/* 245px */
+		padding-left: 6.25%;
 		width: 50%;
 		font-size: 24px;
 		line-height: 28px;
 	}
 	
 	.activity .article-title {
-		padding-bottom: 50px;
+		padding-bottom: 6.25%;                            /* 120px */
 		font-size: 80px;
+		line-height: 88px;
 		color: rgba(193, 193, 193, 0.4)
 	}
 
@@ -712,7 +714,17 @@ section {
 		top: -82px;
 		left: 46px;
 	}
-	
+
+	.image-wrapper {
+		width: 50%;
+	}
+
+	picture,
+	img {
+		height: 100%;
+		width: 100%;
+	}
+
 	.activity .article-title::after{
 		width: 120px;
 		height: 120px;
@@ -721,7 +733,7 @@ section {
 	}
 
 	.page-footer {
-		padding: 125px 525px 20px 525px;
+		padding: 125px 27.34% 20px 27.34%;
 		background-image: url("../images/img/game_1280.jpg");
 	}
 
@@ -761,17 +773,25 @@ section {
 	}
 }
 
+@media (min-width: 2048px) {
+	.image-wrapper,
+	.article-content {
+		max-width: 1024px;
+		outline: solid red 2px;
+	}
+}
+
 
 .button:hover,
 .button-logo:hover {
-  animation: rubber 0.6s ease;
+	animation: rubber 0.6s ease;
 }
 
 h1:hover,
 footer h2 {
   -webkit-animation: neon 1.5s ease-in-out infinite alternate;
   -moz-animation: neon 1.5s ease-in-out infinite alternate;
-  animation: neon 1.5s ease-in-out infinite alternate;
+	animation: neon 1.5s ease-in-out infinite alternate;
 }
 
 picture {
