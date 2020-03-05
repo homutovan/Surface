@@ -55,7 +55,13 @@ a {
 }
 
 h1 {
+	display: flex;
+	flex-direction: column;
 	color: #ffffff;
+}
+
+h1 span:last-child {
+	margin-left: auto;
 }
 
 .page-header,
@@ -96,17 +102,30 @@ h1 {
 
 .download-form {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	max-width: 670px;
 }
 
-.button {
+.button,
+.button-logo {
 	display: flex;
+	justify-content: center;
+	border-radius: 5.2vw;
 	background-image: radial-gradient(#51389c, #7655d5);
 	color: #ffffff;
 }
 
-.button-text div:nth-child(2) {
+.button-logo {
+	border-radius: 23%;
+}
+
+.button-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.button-text div:last-child {
 	font-weight: 700;
 }
 
@@ -178,12 +197,8 @@ section {
 	background-color: #5e42b0;
 }
 
-.button-logo {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	background-image: radial-gradient(#51389c, #7655d5);
-	border-radius: 23%;
+.logo {
+	width: 77%;
 }
 
 .page-footer h2 {
@@ -201,74 +216,72 @@ section {
 	h1 {
 		margin-top: 132px;
 		margin-bottom: 82px;
-		max-width: 280px;
-		font-size: 28px;
-		line-height: 32px;
+		width: 87.25%;
+		font-size: 8.4vw;
+		line-height: 9.2vw;
 		letter-spacing: 1.5px;
 	}
 	
-	.second-string {
+	h1 span:last-child {
+		width: 82.69%; 
 		margin-top: 20px;
-		padding-left: 45px;
 	}
 	
 	.page-header {
-		padding: 30px 20px 12px 20px;
+		padding: 30px 0 12px 0;
 		background-image: url("../images/img/football_767.jpg");
 	}
 		
 	.logo-text {
-		width: 135px;
+		width: 41.2%;
 	}
-	
-	.logo {
-		width: 58px;
-	}
-	
+		
 	.download-form {
-		display: block;
-		margin-bottom: 70px;
+		margin-bottom: 65px;
 	}
 	
 	.button {
 		margin: 0 auto 12px auto;
-		padding-left: 80px;
-		width: 280px;
-		font-size: 8px;
-		border-radius: 17px;
+		padding: 6px 0 6px 0;
+		width: calc(200px + 100% / 4);
+	}
+
+	.button * {
+		
 	}
 	
 	.button-text {
-		margin-top: 8px;
+		width: calc(100% - 190px);
+		font-size: 2.4vw;
 		margin-left: 6px;
-		margin-bottom: 8px;
 	}
 	
 	.icon {
-		width: 24px;
+		width: 7.5vw;
 	}
 	
 	.section-title {
 		padding-bottom: 230px;
-		padding-left: 20px;
+		padding-left: 6.25%;
 		padding-top: 5px;
 		font-size: 50px;
 	}
 	
 	.section-title::after {
-		width: 200px;
-		bottom: -55px;
-		right: 15%;
+		width: 100%;
+		height: 285px;
+		left: 0;
+		background-position-x: 50%;
 	}
-	
+
 	.athlets .section-title::after {
-		content: url("../images/img/footballer_192.png");
+		top: 70px;
+		background-image: url("../images/img/footballer_192.png");		
 	}
 	
 	.players .section-title::after {
-		width: 300px;
-		right: 1%;
-		content: url("../images/img/basketballer_302.png");
+		top: 60px;
+		background-image: url("../images/img/basketballer_302.png");
 	}
 	
 	.feature {
@@ -277,24 +290,12 @@ section {
 	}
 	
 	.feature:nth-child(3n+2) {
-		padding-top: 87px;
-		padding-bottom: 50px;
 		background-color: #fafafa;
 	}
-	
-	.feature:nth-child(3n+3) {
-		padding-top: 60px;
-		padding-bottom: 50px;
-	}
-	
-	.athlets .feature:nth-child(3n+4) {
-		padding-top: 60px;
-		padding-bottom: 50px;
-	}
-		
+			
 	.article-content {
-		padding-right: 20px;
-		padding-left: 20px;
+		padding-right: 6.25%;
+		padding-left: 6.25%;
 		font-size: 15px;
 		line-height: 19px;
 		letter-spacing: 0.7px;
@@ -345,84 +346,79 @@ section {
 		left: 0;
 	}
 	
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
 	.button-logo {
-		width: 72px;
-		height: 72px;
+		width: 22.5%;
+		height: 22.5vw;
 	}
 	
 	.page-footer {
-		padding: 100px 19px 10px 19px;
+		padding: 100px 0 10px 0;
 		background-image: url("../images/img/game_767.jpg");
 	}
 	
 	.page-footer h2 {
 		margin-top: 50px;
-		font-size: 32px;
+		font-size: 9.5vw;
 		letter-spacing: 1px;
 		font-weight: 700;
 	}
 	
 	.page-footer h3 {
-		font-size: 14px;
+		font-size: 4.3vw;
 		margin-bottom: 70px;
 	}
 	
 	.page-footer .download-form {
-		margin-bottom: 80px;
+		margin-bottom: 70px;
 	}
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
 	.page-header {
-		padding: 40px 55px 90px 55px;
+		padding: 40px 0 90px 0;
 		background-image: url("../images/img/football_1280.jpg");
 	}
 
 	.logo-text {
-		width: 205px;
+		width: 25%;
 	}
 
 	h1 {
 		margin-top: 165px;
 		margin-bottom: 300px;
-		padding-left: 5px;
-		max-width: 610px;
-		font-size: 64px;
+		width: 78.74%;
+		font-size: 8.15vw;
 		letter-spacing: 3px;
 		line-height: 75px;
 	}
 
-	.second-string {
-		padding-left: 110px;
+	h1 span:last-child {
+		width: 83.3%;
 		margin-top: 5px;
 	}
 	
 	.download-form {
-		display: flex;
-		justify-content: space-between;
-		width: 93%;
+		width: 86%;
 	}
 
 	.icon {
-		width: 42px;
+		width: 5.5vw;
 	}
 
 	.button {
-		padding-left: 35px;
-		min-width: 280px;
-		flex-basis: 310px;
-		font-size: 14px;
-		border-radius: 40px;
-	}
-
-	.button:nth-child(2) {
-		padding-left: 50px;
+		width: 47.73%;
+		padding: 18px 0 18px 0;
 	}
 
 	.button-text {
-		margin-left: 25px;
-		margin-top: 20px;
-		margin-bottom: 20px;
+		font-size: 1.8vw;
+		width: 44.62%;
+		margin-left: 8%;
 	}
 
 	.section-title {
@@ -433,7 +429,7 @@ section {
     
   .athlets .section-title,
   .athlets .article-content {
-    max-width: 476px;
+    width: 61.85%;
 		margin-left: auto;
 		padding-right: 32px;
   }
@@ -465,39 +461,31 @@ section {
 		padding-bottom: 35px;
 	}
 
-	.feature:nth-child(3n+2) {
-		background-color: #ffffff;
-	}
-	
-	.feature:nth-child(3n+3) {
-		padding-bottom: 35px;
-	}
-
 	.athlets .section-title::after {
-		background-image: url("../images/img/footballer_497.png");
-		width: 700px;
-		height: 700px;
-		bottom: -625px;
-		top: 0;
+		width: 45%;
+		max-width: 365px;
+		height: 115%;
+		top: 95px;
 		left: 0;
-		outline: solid red 3px;
+		background-image: url("../images/img/footballer_497.png");
+		background-size: 145%;
+		background-position-x: calc(-320px + 20vw);
+		background-position-y: 0;
 	}
 	
 	.players .section-title::after {
-		background-image: url("../images/img/basketballer_436.png");
-		background-size: 100%;
 		width: 56.5%;
 		height: 90%;
-		background-position-x: 100%;
-		background-position-y: 20%;
 		right: 0;
-		top: 0;
-		outline: solid red 3px;
+		top: 20px;
+		background-image: url("../images/img/basketballer_436.png");
+		background-size: 100%;
+		background-position-y: 20%;
     }
     
 	.players .section-title,
 	.players .article-content {
-		max-width: 444px;
+		max-width: 60.94%;
 		padding-left: 32px;
 	}
 
@@ -519,7 +507,6 @@ section {
 		padding-bottom: 50px;
 		padding-left: 0;
 		font-size: 80px;
-
 		color: rgba(193, 193, 193, 0.4)
 	}
 
@@ -538,28 +525,29 @@ section {
 	}
 
 	.page-footer {
-		padding: 125px 32px 20px 32px;
+		padding: 125px 0 20px 0;
 		background-image: url("../images/img/game_1280.jpg");
 	}
 
 	.button-logo {
-		width: 130px;
-		height: 130px;
+		width: 16.93%;
+		height: 16.93vw;
 	}
 
 	.logo {
-		width: 100px;
+		width: 77%;
 	}
 
 	.page-footer h2 {
 		margin-top: 50px;
-		font-size: 80px;
+		font-size: 10.2vw;
 		letter-spacing: 3px;
 		font-weight: 700;
 	}
 	
 	.page-footer h3 {
-		font-size: 36px;
+		font-size: 4.6vw;
+		font-weight: 400;
 		margin-bottom: 280px;
 	}
 	
@@ -570,26 +558,31 @@ section {
 
 @media (min-width: 961px) {
 	.page-header {
-		padding: 42px 180px 105px 180px;
+		padding: 42px 0 105px 0;
 		background-image: url("../images/img/football_1920.jpg");
 	}
 
 	.logo-text {
-		width: 190px;
+		width: 10%;
 	}
 
 	h1 {
-		margin-top: 292px;
-		margin-bottom: 220px;
-		padding-left: 5px;
-		font-size: 90px;
-		letter-spacing: 3px;
-		line-height: 75px;
+		width: 80.21%;
+		margin-top: 280px;
+		margin-bottom: 100px;
+		font-size: 4.7vw;
+		letter-spacing: 4px;
+		line-height: 4.8vw;
+		}
+    
+	h1 span:last-child {
+		width: 71%;
+		flex-basis: 200px;
 	}
 
-	.second-string {
-		margin-top: 20px;
-		margin-left: auto;
+	.download-form {
+		width: 35.16%;
+		min-width: 670px;
 	}
 
 	.icon {
@@ -598,14 +591,9 @@ section {
 
 	.button {
 		padding-left: 35px;
-		min-width: 280px;
-		flex-basis: 310px;
+		width: 46.13%;
 		font-size: 14px;
 		border-radius: 40px;
-	}
-
-	.button:nth-child(2) {
-		padding-left: 50px;
 	}
 
 	.button-text {
@@ -755,7 +743,9 @@ section {
 
 	.button-logo {
 		margin: 0 0 0 auto;
-		width: 130px;
+		min-width: 130px;
+		width: 6.77%;
+
 		height: 130px;
 	}
 
