@@ -258,15 +258,15 @@ section {
 	.button {
 		width: 87.5vmin;
 		/* height: calc(22px + 4vw); */
-		height: 10.5vmin;
+		height: 7.5vmax;
 		margin: 0 auto 12px auto;
 		padding: 1.5vmin 0;
 
 	}
 	
 	.button-text {
-		width: calc(100% - 190px);
-		font-size: 2.4vw;
+		width: 30%;
+		font-size: 2.4vmin;
 		margin-left: 6px;
 	}
 	
@@ -367,8 +367,8 @@ section {
 	}
 
 	.button-logo {
-		width: 22.5%;
-		height: 22.5vw;
+		width: 22.5vmin;
+		height: 22.5vmin;
 	}
 	
 	.page-footer {
@@ -385,7 +385,6 @@ section {
 	
 	.page-footer h3 {
 		font-size: 4.3vmin;
-		margin-bottom: 12.4vh;
 	}
 	
 	.page-footer .download-form {
@@ -433,18 +432,18 @@ section {
 	}
 
 	.icon {
-		height: 5.2vmin;
+		height: 5.2vmax;
 	}
 
 	.button {
 		width: 47.73%;
 		/* height: calc(38px + 5vw); */
-		height: 8.2vh;
+		height: 8.2vmax;
 		padding: 2vh 0 2vh 0;
 	}
 
 	.button-text {
-		font-size: 1.8vmin;
+		font-size: 1.8vmax;
 		width: 44.62%;
 		margin-left: 8%;
 	}
