@@ -241,13 +241,11 @@ section {
 	}
 	
 	.button {
+		width: calc(200px + 100% / 4);
+		height: 12%;
 		margin: 0 auto 12px auto;
 		padding: 6px 0 6px 0;
-		width: calc(200px + 100% / 4);
-	}
 
-	.button * {
-		
 	}
 	
 	.button-text {
