@@ -120,22 +120,6 @@ h1 {
 	color: #ffffff;
 }
 
-.button * {
-
-}
-
-.button {
-	border-radius: 5.2vw;
-	background-image: radial-gradient(#51389c, #7655d5);
-	color: #ffffff;
-}
-
-.button-link {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-}
-
 .button-logo {
 	border-radius: 23%;
 }
@@ -264,7 +248,7 @@ section {
 	.button {
 		width: calc(200px + 100% / 4);
 		/* height: 12%; */
-		height: 40px;
+		height: calc(20px + 4vw);
 		margin: 0 auto 12px auto;
 		padding: 6px 0 6px 0;
 
