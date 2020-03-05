@@ -134,8 +134,6 @@ h1 {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	height: fit-content;
-
 }
 
 .button-logo {
@@ -266,6 +264,7 @@ section {
 	.button {
 		width: calc(200px + 100% / 4);
 		height: 12%;
+		height: 40px;
 		margin: 0 auto 12px auto;
 		padding: 6px 0 6px 0;
 
