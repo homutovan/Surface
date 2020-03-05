@@ -92,7 +92,11 @@ h1 span:last-child {
 
 .container {
   position: relative;
-  max-width: 2048px;
+	max-width: 2048px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	z-index: 1;
 }
 
@@ -366,24 +370,24 @@ section {
 	}
 	
 	.page-footer {
-		padding: 100px 0 10px 0;
+		padding: 17.7vh 0 1.8vh 0;
 		background-image: url("../images/img/game_767.jpg");
 	}
 	
 	.page-footer h2 {
-		margin-top: 50px;
-		font-size: 9.5vw;
+		margin-top: 8.8vh;
+		font-size: 9.5vmin;
 		letter-spacing: 1px;
 		font-weight: 700;
 	}
 	
 	.page-footer h3 {
-		font-size: 4.3vw;
-		margin-bottom: 70px;
+		font-size: 4.3vmin;
+		margin-bottom: 12.4vh;
 	}
 	
 	.page-footer .download-form {
-		margin-bottom: 70px;
+		margin-bottom: 12.4vh;
 	}
 }
 
@@ -418,7 +422,6 @@ section {
 	}
 
 	h1 span:last-child {
-		/* width: 83.3%; */
 		padding-left: 17%;
 		margin-top: 5px;
 	}
@@ -428,7 +431,7 @@ section {
 	}
 
 	.icon {
-		width: 5.5vw;
+		height: 100%;
 	}
 
 	.button {
@@ -439,7 +442,7 @@ section {
 	}
 
 	.button-text {
-		font-size: 1.8vw;
+		font-size: 1.8vmin;
 		width: 44.62%;
 		margin-left: 8%;
 	}
@@ -548,13 +551,14 @@ section {
 	}
 
 	.page-footer {
-		padding: 125px 0 20px 0;
-		background-image: url("../images/img/game_1280.jpg");
+		/* padding: 125px 0 20px 0; */
+		padding: 13vh 0 2.1vh 0;
+		background-image: url("../images/img/game_1280.jpg");	
 	}
 
 	.button-logo {
-		width: 16.93%;
-		height: 16.93vw;
+		width: 16.93vmin;
+		height: 16.93vmin;
 	}
 
 	.logo {
@@ -562,20 +566,19 @@ section {
 	}
 
 	.page-footer h2 {
-		margin-top: 50px;
-		font-size: 10.2vw;
+		margin-top: 5.2vh;
+		font-size: 10.2vmin;
 		letter-spacing: 3px;
 		font-weight: 700;
 	}
 	
 	.page-footer h3 {
-		font-size: 4.6vw;
+		font-size: 4.6vmin;
 		font-weight: 400;
-		margin-bottom: 280px;
 	}
 	
 	.page-footer .download-form {
-		margin-bottom: 55px;
+		margin-bottom: 5.2vh;
 	}
 }
 
