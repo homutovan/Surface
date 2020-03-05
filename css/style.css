@@ -263,7 +263,7 @@ section {
 	
 	.button {
 		width: calc(200px + 100% / 4);
-		height: 12%;
+		/* height: 12%; */
 		height: 40px;
 		margin: 0 auto 12px auto;
 		padding: 6px 0 6px 0;
