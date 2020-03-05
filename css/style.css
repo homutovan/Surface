@@ -27,6 +27,11 @@
   -webkit-appearance: none;
 }
 
+html {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%
+}
+
 *::before,
 *::after {
 	pointer-events: none;
@@ -93,7 +98,6 @@ h1 span:last-child {
 .container {
   position: relative;
 	max-width: 2048px;
-	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -225,34 +229,39 @@ section {
 @media (max-width: 640px) {
 	
 	.page-header {
-		/* padding: 30px 0 12px 0; */
-		padding: 5.3vh 0 2.2vh 0;
+		padding: 5.3vh 0 5.3vh 0;
 		background-image: url("../images/img/football_767.jpg");
 	}
 
+	.page-header .wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-basis: 50vh;
+	}
+
+	.page-header .container {
+		flex-basis: 80vh;
+	}
+
 	h1 {
-		/* margin-top: 132px;
-		margin-bottom: 82px; */
-		margin-top: 23.4vh;
-		margin-bottom: 14.5vh;
-		width: 87.25%;
-		font-size: 8.4vw;
-		line-height: 9.2vw;
+		width: 87.25vw;
+		font-size: calc(28px + 36 * (100vmin - 320px) / 448);
+		line-height: calc(31px + 40 * (100vmin - 320px) / 448);
 		letter-spacing: 1.5px;
 	}
 	
 	h1 span:last-child {
 		width: 82.69%; 
-		margin-top: 20px;
+		margin-top: 3.5vh;
 	}
 	
 	.logo-text {
 		width: 41.2%;
+		height: 6.14vh;
 	}
 		
 	.download-form {
-		/* margin-bottom: 65px; */
-		margin-bottom: 11.5vh;
 	}
 	
 	.button {
@@ -266,7 +275,8 @@ section {
 	
 	.button-text {
 		width: 30%;
-		font-size: 2.4vmin;
+		/* font-size: 2.4vmin; */
+		font-size: calc(8px + 6 * (100vmin - 320px) / 448);
 		margin-left: 6px;
 	}
 	
@@ -743,6 +753,7 @@ section {
 
 	.image-wrapper,
 	.activity .article-content {
+		max-width: 1024px;
 		width: 50%;
 	}
 
@@ -801,10 +812,6 @@ section {
 }
 
 @media (min-width: 2048px) {
-	.image-wrapper,
-	.article-content {
-		max-width: 1024px;
-	}
 
 	.activity .article-content {
 		padding-top: 255px;                      
