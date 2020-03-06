@@ -67,11 +67,12 @@ a {
 h1 {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	color: #ffffff;
 }
 
 h1 span:last-child {
-	margin-left: auto;
+	align-self: flex-end;
 }
 
 .page-header,
@@ -95,16 +96,19 @@ h1 span:last-child {
 	opacity: 0.9;
 }
 
+.page-header .wrapper,
 .container {
-  position: relative;
-	max-width: 2048px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+.container {
+  position: relative;
+	max-width: 2048px;
 	z-index: 1;
 }
 
-.container,
 .logo-text,
 .logo,
 .download-form,
@@ -227,62 +231,63 @@ section {
 }
 
 @media (max-width: 640px) {
+
+	:root {
+		font-size: calc(8px + 8 * (100vmin - 320px) / 448);
+	}
 	
 	.page-header {
+		display: flex;
+		flex-direction: column;
 		padding: 5.3vh 0 5.3vh 0;
 		background-image: url("../images/img/football_767.jpg");
 	}
 
 	.page-header .wrapper {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		flex-basis: 50vh;
+		flex-basis: 49.5vh;
 	}
 
 	.page-header .container {
-		flex-basis: 80vh;
+		flex-basis: 82vh;
 	}
 
 	h1 {
 		width: 87.25vw;
-		font-size: calc(28px + 36 * (100vmin - 320px) / 448);
-		line-height: calc(31px + 40 * (100vmin - 320px) / 448);
+		height: 14rem;
+		font-size: 3.5rem;
+		line-height: 3.8rem;
 		letter-spacing: 1.5px;
 	}
 	
 	h1 span:last-child {
-		width: 82.69%; 
-		margin-top: 3.5vh;
+		width: 72.5vmin; 
 	}
 	
 	.logo-text {
-		width: 41.2%;
+		width: 41.2vw;
 		height: 6.14vh;
-	}
-		
-	.download-form {
 	}
 	
 	.button {
 		width: 87.5vmin;
-		/* height: calc(22px + 4vw); */
-		height: 7.5vmax;
-		margin: 0 auto 12px auto;
+		height: 4.5rem;
+		margin: 0 auto 1.5rem auto;
 		padding: 1.5vmin 0;
+	}
 
+	.download-form {
+		width: 100%;
 	}
 	
 	.button-text {
 		width: 30%;
-		/* font-size: 2.4vmin; */
-		font-size: calc(8px + 6 * (100vmin - 320px) / 448);
-		margin-left: 6px;
+		font-size: 1rem;
+		margin-left: 0.75rem;
 	}
 	
 	.icon {
-		width: 7.5vmin;
-		height: 7.5vmin;
+		width: 3rem;
+		height: 3rem;
 	}
 	
 	.section-title {
@@ -369,10 +374,6 @@ section {
 		height: 70px;
 		top: -95px;
 		left: 0;
-	}
-	
-	.wrapper {
-		margin-bottom: 13.3vh;
 	}
 
 	.button-logo {
