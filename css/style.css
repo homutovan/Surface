@@ -77,11 +77,13 @@ h1 span:last-child {
 
 .page-header,
 .page-footer {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 	position: relative;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	height: 100vh;
 }
 
 .page-header::after,
@@ -237,8 +239,6 @@ section {
 	}
 	
 	.page-header {
-		display: flex;
-		flex-direction: column;
 		padding: 5.3vh 0 5.3vh 0;
 		background-image: url("../images/img/football_767.jpg");
 	}
@@ -264,7 +264,7 @@ section {
 	}
 	
 	.logo-text {
-		width: 41.2vw;
+		width: 41.2vmin;
 		height: 6.14vh;
 	}
 	
@@ -382,23 +382,38 @@ section {
 	}
 	
 	.page-footer {
-		padding: 17.7vh 0 1.8vh 0;
+		padding: 1.8vh 0;
+		justify-content: flex-end;
 		background-image: url("../images/img/game_767.jpg");
+	}
+
+	.page-footer .container {
+		flex-direction: column;
+		flex-basis: 81.87vh;
+	}
+
+	.page-footer .wrapper {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 32.57vh;
+		justify-content: space-between;
+	}
+
+	.download-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-basis: 62.92vh;
 	}
 	
 	.page-footer h2 {
-		margin-top: 8.8vh;
-		font-size: 9.5vmin;
+		font-size: 4rem;
 		letter-spacing: 1px;
 		font-weight: 700;
 	}
 	
 	.page-footer h3 {
-		font-size: 4.3vmin;
-	}
-	
-	.page-footer .download-form {
-		margin-bottom: 12.4vh;
+		font-size: 1.75rem;
 	}
 }
 
@@ -837,19 +852,19 @@ footer h2 {
 	animation: neon 1.5s ease-in-out infinite alternate;
 }
 
-picture {
+img {
 	transition: 2s ease;
 }
 
-.activity article:nth-child(odd) picture {
+.activity article:nth-child(odd) img {
 	animation: increase1 10s ease-in-out infinite alternate;
 }
 
-.activity article:nth-child(even) picture {
+.activity article:nth-child(even) img {
 	animation: increase2 10s ease-in-out infinite alternate;
 }
 
-picture:hover {
+img:hover {
 	transform: scale(1.2);
 }
 
