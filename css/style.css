@@ -65,7 +65,7 @@ a {
 }
 
 h1 {
-  max-width: 120vmin;
+  max-width: 150vmin;
 	color: #ffffff;
 }
 
@@ -78,14 +78,10 @@ h1 span:last-child {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	height: 100vh;
+  height: 100vh;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-}
-
-.page-header {
-	max-height: 960px;
 }
 
 .page-footer {
@@ -120,7 +116,6 @@ h1,
 }
 
 .page-header .container {
-	max-height: 810px;
 	flex-basis: 87vh;
 }
 
@@ -147,6 +142,8 @@ h1 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	width: 84.64vw;
+	max-width: 675px;
 }
 
 .button,
@@ -165,13 +162,22 @@ h1 {
 
 .button {
     width: 40.36vw;
-    max-width: 310px;
+		max-width: 310px;
+		height: 4.8rem;
+		padding: 1rem;
 }
 
 .button-text {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin-left: 1.5rem;
+	width: 50%;
+	font-size: 0.88rem;
+}
+
+.icon {
+	width: 2.75rem;
 }
 
 .button-text div:last-child {
@@ -255,6 +261,18 @@ section {
     height: 77%;
 }
 
+.page-footer .container {
+	flex-basis: 84.55vh;
+}
+
+.download-wrapper {
+	flex-basis: 73.07vh;
+}
+
+.page-footer .wrapper {
+	flex-basis: 36.2vh;
+}
+
 .page-footer h2 {
 	text-align: center;
 	color: #ffffff;
@@ -263,6 +281,14 @@ section {
 .page-footer h3 {
 	text-align: center;
 	color: #9b8ec1;
+}
+
+h1,
+footer h2 {
+  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+	-moz-animation: neon 1.5s ease-in-out infinite alternate;
+	-o-animation: neon 1.5s ease-in-out infinite alternate;
+	animation: neon 1.5s ease-in-out infinite alternate;
 }
 
 @media (max-width: 640px) {
@@ -453,10 +479,6 @@ section {
 		background-image: url("../images/img/football_1280.jpg");
 	}
 
-	.page-header .container {
-		max-height: 1000px;
-	}
-
 	h1 {
 		width: 77vw;
 		height: 13.88rem;
@@ -466,28 +488,9 @@ section {
 	}
 
 	h1 span:last-child {
-		width: 64.5vmin; 
+		width: 64.5vw; 
 	}
 	
-	.download-form {
-		width: 84.64vmin;
-	}
-
-	.icon {
-		width: 2.75rem;
-	}
-
-	.button {
-		height: 4.8rem;
-		padding: 1rem;
-	}
-
-	.button-text {
-		font-size: 0.88rem;
-		width: 18.75vmin;
-		margin-left: 1.5rem;
-	}
-
 	.section-title {
 		padding-top: 60px;
     font-size: 80px;
@@ -595,18 +598,6 @@ section {
 		background-image: url("../images/img/game_1280.jpg");	
 	}
 
-	.page-footer .container {
-		flex-basis: 84.55vh;
-	}
-	
-	.download-wrapper {
-		flex-basis: 73.07vh;
-	}
-
-	.page-footer .wrapper {
-		flex-basis: 36.2vh;
-	}
-
 	.button-logo {
 		width: 16.93vmin;
 		height: 18vmin;
@@ -624,43 +615,31 @@ section {
 }
 
 @media (min-width: 961px) {
+
+  .page-header,
+  .page-footer {
+    max-height: 960px;
+  }
+
 	.page-header {
-		max-height: 960px;
 		padding: 40px 0;
 		background-image: url("../images/img/football_1920.jpg");
 	}
 
+	.page-header .container {
+		max-height: 810px;
+	}
+
 	h1 {
-		width: 81%;
+		width: 79vw;
 		font-size: 4.7vw;
 		letter-spacing: 4px;
 		line-height: 4.8vw;
+		animation: none;
 		}
     
 	h1 span:last-child {
-		width: 73%;
-	}
-
-	.download-form {
-		width: 35.16%;
-		min-width: 670px;
-	}
-
-	.icon {
-		width: 42px;
-	}
-
-	.button {
-		padding-left: 35px;
-		width: 46.13%;
-		font-size: 14px;
-		border-radius: 40px;
-	}
-
-	.button-text {
-		margin-left: 25px;
-		margin-top: 20px;
-		margin-bottom: 20px;
+		width: 56.5vw;
 	}
 
 	.section-title {
@@ -744,6 +723,7 @@ section {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		position: relative;
 	}
 
 	.activity article:nth-child(2n) {
@@ -757,18 +737,20 @@ section {
 	}
 	
 	.activity .article-title {
+		position: static;
 		padding-left: 0;
+		#padding-top: 33%;
 		padding-bottom: 6.25%;                        
-		font-size: 80px;
+		font-size: calc(80px + 40 * (100vw - 1920px) / 1152);
 		line-height: 88px;
 		color: rgba(193, 193, 193, 0.4)
 	}
 
-	.activity .article-title::before{
+	.activity .article-title::before {
 		line-height: 34px;
 		font-size: 24px;
-		top: 0;
-		left: 46px;
+		top: calc(43% - 17px);
+		left: calc(50% - 17px);
 	}
 
 	.image-wrapper,
@@ -782,32 +764,36 @@ section {
 	}
 
 	.activity .article-title::after{
-		width: 120px;
-		height: 120px;
-		top: 0;
-		left: -140px;
+		width: 8.1vw;
+		height: 8.1vw;
+		top: calc(43% - 8.1vw / 2);
+		left: calc(50% - 8.1vw / 2);
 	}
 
+
 	.page-footer {
-		padding: 125px 27.34% 20px 27.34%;
+		padding: 50px 0;
 		background-image: url("../images/img/game_1280.jpg");
 	}
 
-	.page-footer .wrapper {
-		display: flex;
-		margin-bottom: 125px;
+	.page-footer .container {
+		max-height: 680px;
 	}
 
-	.head-form {
-		margin-right: auto;
-		padding-left: 30px;
+	.download-wrapper {
+		max-height: 365px;
+	}
+
+	.page-footer .wrapper {
+		width: 900px;
+		padding-right: 15px;
+		margin: 0 auto;
+		flex-direction: row;
 	}
 
 	.button-logo {
-		margin: 0 0 0 auto;
 		min-width: 130px;
 		width: 6.77%;
-
 		height: 130px;
 	}
 
@@ -816,6 +802,7 @@ section {
 	}
 
 	.page-footer h2 {
+		padding-top: 5px;
 		font-size: 80px;
 		line-height: 88px;
 		letter-spacing: 3.5px;
@@ -824,11 +811,16 @@ section {
 	
 	.page-footer h3 {
 		font-size: 30px;
+		text-align: start;
 	}
-	
-	.page-footer .download-form {
-		margin-bottom: 55px;
+
+	h1:hover {
+		-webkit-animation: neon 1.5s ease-in-out infinite alternate;
+		-moz-animation: neon 1.5s ease-in-out infinite alternate;
+		-o-animation: neon 1.5s ease-in-out infinite alternate;
+		animation: neon 1.5s ease-in-out infinite alternate;
 	}
+
 }
 
 @media (min-width: 2048px) {
@@ -846,14 +838,6 @@ section {
 	-moz-animation: rubber 0.6s ease;
 	-o-animation: rubber 0.6s ease;
 	animation: rubber 0.6s ease;
-}
-
-h1:hover,
-footer h2 {
-  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
-	-moz-animation: neon 1.5s ease-in-out infinite alternate;
-	-o-animation: neon 1.5s ease-in-out infinite alternate;
-	animation: neon 1.5s ease-in-out infinite alternate;
 }
 
 img {
