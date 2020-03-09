@@ -161,6 +161,7 @@ article {
 
 .button-logo {
 	border-radius: 23%;
+	flex-shrink: 0;
 }
 
 .button {
@@ -608,8 +609,6 @@ footer h2 {
 	.button-logo {
 		width: 16.93vw;
 		height: 18vw;
-		width: 100px;
-		height: 100px;
 	}
 
 	.page-footer h2 {
