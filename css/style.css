@@ -323,7 +323,7 @@ footer h2 {
 	}
 	
 	h1 span:last-child {
-		width: 72.5vmin; 
+		padding-left: 5.5rem;
 	}
 	
 	.logo-text {
@@ -495,7 +495,7 @@ footer h2 {
 	}
 
 	h1 span:last-child {
-		width: 64.5vw; 
+		padding-left: 6.25rem; 
 	}
 	
 	.section-title {
@@ -606,8 +606,8 @@ footer h2 {
 	}
 
 	.button-logo {
-		width: 16.93vmin;
-		height: 18vmin;
+		width: 16.93vw;
+		height: 18vw;
 	}
 
 	.page-footer h2 {
@@ -639,14 +639,14 @@ footer h2 {
 
 	h1 {
 		width: 79vw;
-		font-size: 4.7vw;
+		font-size: calc(90px + 30 * (100vw - 1920px) / 1152);
 		letter-spacing: 4px;
-		line-height: 4.8vw;
+		line-height: calc(100px + 33 * (100vw - 1920px) / 1152);
 		animation: none;
 		}
     
 	h1 span:last-child {
-		width: 56.5vw;
+		padding-left: calc(350px + 350 * (100vw - 1920px) / 1152);
 	}
 
 	.section-title {
