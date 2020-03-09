@@ -608,6 +608,8 @@ footer h2 {
 	.button-logo {
 		width: 16.93vw;
 		height: 18vw;
+		width: 100px;
+		height: 100px;
 	}
 
 	.page-footer h2 {
@@ -638,7 +640,7 @@ footer h2 {
 	}
 
 	h1 {
-		width: 79vw;
+		width: 80vw;
 		font-size: calc(90px + 30 * (100vw - 1920px) / 1152);
 		letter-spacing: 4px;
 		line-height: calc(100px + 33 * (100vw - 1920px) / 1152);
