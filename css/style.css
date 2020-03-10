@@ -350,6 +350,10 @@ footer h2 {
 		flex-basis: 82vh;
 	}
 
+	svg {
+		animation: none;
+	}
+
 	h1 {
 		width: 87.25vw;
 		height: 14rem;
