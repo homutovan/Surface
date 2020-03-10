@@ -49,7 +49,9 @@ body {
 img {
   max-width: 100%;
 	height: auto;
-	transition: 2s ease;
+	transition-timing-function: ease;
+	transition-duration: 2s;
+	transition-property: width height;
 }
 
 .activity article:nth-child(odd) img {
@@ -318,6 +320,7 @@ footer h2 {
 	-moz-animation: neon 1.5s ease-in-out infinite alternate;
 	-o-animation: neon 1.5s ease-in-out infinite alternate;
 	animation: neon 1.5s ease-in-out infinite alternate;
+	transition-property: text-shadow;
 }
 
 .validator {
@@ -904,10 +907,6 @@ footer h2 {
 		background-position-x: 42px;
 		background-size: 1050px;
 	}
-}
-
-article:hover {
-	filter: brightness(85%);
 }
 
 @keyframes pulse {
