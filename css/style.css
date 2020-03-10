@@ -51,7 +51,7 @@ img {
 	height: auto;
 	transition-timing-function: ease;
 	transition-duration: 2s;
-	transition-property: width, height;
+	transition-property: transform;
 }
 
 .activity article:nth-child(odd) img {
@@ -930,8 +930,12 @@ footer h2 {
 }
 
 img:hover {
-	animation: none;
 	transform: scale(1.2);
+}
+
+.feature:hover {
+	border-radius:16px;
+  box-shadow: inset -5px -5px 5px 0 rgba(0,0,0,.5), inset 5px 5px 5px 0 rgba(255,255,255,0.5);
 }
 
 @keyframes pulse {
