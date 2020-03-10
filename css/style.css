@@ -48,7 +48,16 @@ body {
 
 img {
   max-width: 100%;
-  height: auto;
+	height: auto;
+	transition: 2s ease;
+}
+
+.activity article:nth-child(odd) img {
+	animation: increase1 5s ease-in-out infinite alternate;
+}
+
+.activity article:nth-child(even) img {
+	animation: increase1 5s ease-in-out infinite alternate-reverse;
 }
 
 svg {
@@ -654,6 +663,13 @@ footer h2 {
 		line-height: calc(100px + 33 * (100vw - 1920px) / 1152);
 		animation: none;
 		}
+
+	h1:hover {
+		-webkit-animation: neon 1.5s ease-in-out infinite alternate;
+		-moz-animation: neon 1.5s ease-in-out infinite alternate;
+		-o-animation: neon 1.5s ease-in-out infinite alternate;
+		animation: neon 1.5s ease-in-out infinite alternate;
+	}	
     
 	h1 span:last-child {
 		padding-left: calc(350px + 350 * (100vw - 1920px) / 1152);
@@ -787,8 +803,9 @@ footer h2 {
 		left: calc(50% - 17px);
 	}
 
-	img {
+	.page-main .activity article img {
 		width: 100%;
+		animation: none;
 	}
 
 	.activity .article-title::after{
@@ -799,7 +816,6 @@ footer h2 {
 		top: calc(43% - 10%);
 		left: calc(50% - 8.1% / 2);
 	}
-
 
 	.page-footer {
 		padding: 50px 0;
@@ -844,13 +860,6 @@ footer h2 {
 		text-align: start;
 	}
 
-	h1:hover {
-		-webkit-animation: neon 1.5s ease-in-out infinite alternate;
-		-moz-animation: neon 1.5s ease-in-out infinite alternate;
-		-o-animation: neon 1.5s ease-in-out infinite alternate;
-		animation: neon 1.5s ease-in-out infinite alternate;
-	}
-	
 	.validator {
 		display: block;
 	}
@@ -886,19 +895,8 @@ footer h2 {
 	animation: rubber 0.6s ease;
 }
 
-img {
-	transition: 2s ease;
-}
-
-.activity article:nth-child(odd) img {
-	animation: increase1 10s ease-in-out infinite alternate;
-}
-
-.activity article:nth-child(even) img {
-	animation: increase2 10s ease-in-out infinite alternate;
-}
-
 img:hover {
+	animation: none;
 	transform: scale(1.2);
 }
 
@@ -916,58 +914,8 @@ img:hover {
 		transform: scale(1);
   }
 
-  30% {
-		transform: scale(1.05);
-  }
-
-  40% {
-		transform: scale(1.1);
-  }
-
-  50% {
-		transform: scale(1.15);
-  }
-
-  65% {
-		transform: scale(1.1);
-  }
-
-  75% {
-		transform: scale(1.05);
-  }
-
   to {
-		transform: scale(1);
-  }
-}
-
-@keyframes increase2 {
-  from {
-		transform: scale(1.15);
-  }
-
-  30% {
-		transform: scale(1.15);
-  }
-
-  40% {
-		transform: scale(1.1);
-  }
-
-  50% {
-		transform: scale(1.05);
-  }
-
-  65% {
-		transform: scale(1.1);
-  }
-
-  75% {
-		transform: scale(1.15);
-  }
-
-  to {
-		transform: scale(1);
+		transform: scale(1.12);
   }
 }
 
