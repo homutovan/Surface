@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Open Sans;
+  font-family: OpenSans;
 	src: url(/fonts/fonts/OpenSans-Regular.ttf) format("ttf"),
 			url(/fonts/fonts/OpenSans-Regular.woff) format("woff"),
 			url(/fonts/fonts/OpenSans-Regular.woff2) format("woff2");
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-  font-family: Open Sans;
+  font-family: OpenSans;
 	src: url(/fonts/fonts/OpenSans-Bold.ttf) format("ttf"),
 			url(/fonts/fonts/OpenSans-Bold.woff) format("woff"),
 			url(/fonts/fonts/OpenSans-Bold.woff2) format("woff2");
@@ -43,7 +43,7 @@ title {
 
 body {
   min-width: 320px;
-  font-family: Open Sans, Arial, Helvetica, sans-serif;
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
 }
 
 img {
@@ -294,6 +294,13 @@ footer h2 {
 	-moz-animation: neon 1.5s ease-in-out infinite alternate;
 	-o-animation: neon 1.5s ease-in-out infinite alternate;
 	animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+.validator {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 
 @media (max-width: 640px) {
@@ -607,8 +614,8 @@ footer h2 {
 	}
 
 	.button-logo {
-		width: 16.93vw;
-		height: 18vw;
+		width: 16.93vmin;
+		height: 18vmin;
 	}
 
 	.page-footer h2 {
@@ -640,6 +647,7 @@ footer h2 {
 
 	h1 {
 		width: 80vw;
+		max-width: 2580px;
 		font-size: calc(90px + 30 * (100vw - 1920px) / 1152);
 		letter-spacing: 4px;
 		line-height: calc(100px + 33 * (100vw - 1920px) / 1152);
@@ -648,6 +656,11 @@ footer h2 {
     
 	h1 span:last-child {
 		padding-left: calc(350px + 350 * (100vw - 1920px) / 1152);
+	}
+
+	section,
+	article {
+		max-width: 2200px;
 	}
 
 	.section-title {
@@ -840,39 +853,25 @@ footer h2 {
 		-o-animation: neon 1.5s ease-in-out infinite alternate;
 		animation: neon 1.5s ease-in-out infinite alternate;
 	}
-
+	
+	.validator {
+		display: block;
+	}
 }
 
 @media (min-width: 2048px) {
 
 	h1 {
-		max-width: 2580px;
 		font-size: 100px;
 		line-height: 110px;
-	}
-
-	h1 span:last-child {
-		max-width: 2055px;;
-	}
-
-	section,
-	article {
-		max-width: 2200px;
 	}
 
 	.activity .article-title {
 		font-size: 85px;
 	}
 
-	.activity .article-content {
-		padding-top: 255px;                      
-		padding-bottom: 255px;										
-		padding-left: 120px;
-	}
-
 	.athlets .section-title::after {
 		background-position-x: 463px;
-		background-size: 596px;
 		background-size: 570px;
 	}
 
@@ -880,7 +879,6 @@ footer h2 {
 		background-position-x: 42px;
 		background-size: 1050px;
 	}
-
 }
 
 .button:hover,
