@@ -390,7 +390,7 @@ footer h2 {
 	}
 
 	.button:after {
-		display: none;
+		#display: none;
 	}
 
 	.download-form {
