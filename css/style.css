@@ -214,6 +214,8 @@ article {
 
 .icon {
 	width: 2.75rem;
+	animation: none;
+	stroke: none;
 }
 
 .button-text div:last-child {
@@ -366,6 +368,8 @@ footer h2 {
 		font-size: 3.5rem;
 		line-height: 3.8rem;
 		letter-spacing: 1.5px;
+		animation: none;
+		text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff, 0 0 8px #ffffff, 0 0 10px #090b35, 0 0 18px #090b35, 0 0 20px #090b35, 0 0 50px #090b35, 0 0 35px #090b35;
 	}
 	
 	h1 span:last-child {
