@@ -320,7 +320,6 @@ footer h2 {
 	-moz-animation: neon 1.5s ease-in-out infinite alternate;
 	-o-animation: neon 1.5s ease-in-out infinite alternate;
 	animation: neon 1.5s ease-in-out infinite alternate;
-	transition-property: text-shadow;
 }
 
 .validator {
