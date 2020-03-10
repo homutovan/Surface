@@ -691,7 +691,7 @@ footer h2 {
 
 	h1 {
 		width: 80vw;
-		max-width: 2580px;
+		max-width: 2000px;
 		font-size: calc(90px + 30 * (100vw - 1920px) / 1152);
 		letter-spacing: 4px;
 		line-height: calc(100px + 33 * (100vw - 1920px) / 1152);
@@ -774,6 +774,11 @@ footer h2 {
 	.feature {
 		padding-top: 60px;
 		padding-bottom: 55px;
+	}
+
+	.feature:hover {
+		border-radius:16px;
+		box-shadow: inset -5px -5px 5px 0 rgba(0,0,0,.5), inset 5px 5px 5px 0 rgba(255,255,255,0.5);
 	}
 	
 	.athlets .section-title::after {
@@ -931,11 +936,6 @@ footer h2 {
 
 img:hover {
 	transform: scale(1.2);
-}
-
-.feature:hover {
-	border-radius:16px;
-  box-shadow: inset -5px -5px 5px 0 rgba(0,0,0,.5), inset 5px 5px 5px 0 rgba(255,255,255,0.5);
 }
 
 @keyframes pulse {
