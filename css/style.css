@@ -64,7 +64,12 @@ img {
 
 svg {
   fill: #ffffff;
+	stroke: #6e4fca;
+	stroke-width: 5px;
+  stroke-linejoin: miter;
+	animation: wave 3s ease-in-out infinite alternate;
 }
+
 
 h1, h2, h3, a {
   text-transform: uppercase;
@@ -352,6 +357,7 @@ footer h2 {
 
 	svg {
 		animation: none;
+		stroke: none;
 	}
 
 	h1 {
@@ -988,13 +994,6 @@ img:hover {
   to {
     transform: scale3d(1, 1, 1);
   }
-}
-
-svg {
-	stroke: #6e4fca;
-	stroke-width: 5px;
-  stroke-linejoin: miter;
-	animation: wave 3s ease-in-out infinite alternate;
 }
 
 @keyframes wave {
