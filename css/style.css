@@ -316,6 +316,7 @@ section {
 
 h1,
 footer h2 {
+	transition-property: text-shadow;
   -webkit-animation: neon 1.5s ease-in-out infinite alternate;
 	-moz-animation: neon 1.5s ease-in-out infinite alternate;
 	-o-animation: neon 1.5s ease-in-out infinite alternate;
