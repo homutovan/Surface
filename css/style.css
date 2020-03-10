@@ -372,6 +372,10 @@ footer h2 {
     padding: 1.5vmin 0;
 	}
 
+	.button:after {
+		display: none;
+	}
+
 	.download-form {
 		width: 100%;
 	}
@@ -902,6 +906,10 @@ footer h2 {
 	}
 }
 
+article:hover {
+	filter: brightness(85%);
+}
+
 @keyframes pulse {
 	0% {
 		opacity: 1;
@@ -915,10 +923,6 @@ footer h2 {
 		opacity: 0;
 		transform: scale(2);
 	}
-}
-
-.button {
-
 }
 
 .button:hover,
