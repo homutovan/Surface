@@ -32,8 +32,9 @@ html {
 	text-size-adjust: 100%
 }
 
-*::before,
-*::after {
+* ::before,
+* ::after {
+	position: absolute;
 	pointer-events: none;
 }
 
@@ -47,7 +48,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+	max-width: 100%;
 	height: auto;
 	transition-timing-function: ease;
 	transition-duration: 2s;
@@ -72,7 +73,8 @@ svg {
 }
 
 
-h1, h2, h3, a {
+h1, h2, h3, a, 
+.head-form p {
   text-transform: uppercase;
 }
 
@@ -95,7 +97,7 @@ h1 span:last-child {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-  height: 100vh;
+  min-height: 100vh;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -107,9 +109,15 @@ h1 span:last-child {
 }
 
 .page-header::after,
-.page-footer::after {
+.page-footer::after,
+.button:after,
+.section-title::after,
+.article-title::after {
 	content: "";
-	position: absolute;
+}
+
+.page-header::after,
+.page-footer::after {
 	background-color: #090b35;
 	top: 0;
 	left: 0;
@@ -155,7 +163,7 @@ article {
 }
 
 .logo-text {
-	width: 27.47vmin;
+	width: 27.47vw;
 	max-width: 192px;
 }
 
@@ -191,13 +199,10 @@ article {
 }
 
 .button:after {
-	content: "";
-	display: block;
 	width: 100%;
 	height: 100%;
 	border-radius: inherit;
 	border: 3px solid #5e42b0;
-	position: absolute;
 	top: -3px;
 	left: -3px;
 	transition-property: width, height, opacity;
@@ -224,7 +229,8 @@ article {
 	font-weight: 700;
 }
 
-section {
+section,
+.activity {
 	position: relative;
 	counter-reset: item;
 }
@@ -234,8 +240,6 @@ section {
 }
 
 .section-title::after {
-	content: "";
-	position: absolute;
 	background-repeat: no-repeat;
 	background-position-y: center;
 }
@@ -262,38 +266,48 @@ section {
 .article-title::before {
 	counter-increment: item;
 	content: "0" counter(item);
-	position: absolute;
-	border-bottom: solid #5e42b0;
 	color: black;
+	z-index: 1;
 }
 
-.athlets .feature:nth-child(4) .article-title::before {
-	border-bottom-color: #ffffff ;
+.article-title::after {
+	background-color: #5e42b0;
 }
 
-.players .feature:nth-child(4) .article-title::before {
+.athlets .feature:nth-child(3n+4) .article-title::after {
+	background-color: #ffffff ;
+}
+
+.players .feature:nth-child(3n+4) .article-title::before {
 	color: #8765dd;
-	border-bottom-color: #efefef ;
+}
+
+.players .feature:nth-child(3n+4) .article-title::after {
+	background-color: #efefef ;
 }
 
 .image-wrapper {
 	overflow: hidden;
+	min-height: 300px;
+	background-color: #c1c1c1;
 }
 
 .activity .article-title {
 	color: #c6c6c6
 }
 
-.activity .article-title::before{
-	z-index: 1;
+.activity .article-title::before {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	color: #f5f6f7;
-	border-bottom-color: #8f7bc8;
+	background-color: #5e42b0;
 }
 
-.activity .article-title::after{
-	content: "";
-	position: absolute;
-	background-color: #5e42b0;
+.activity .article-title::after {
+	background-color: #8f7bc8;
+	z-index: 2;
 }
 
 .logo {
@@ -318,7 +332,7 @@ section {
 	color: #ffffff;
 }
 
-.page-footer h3 {
+.head-form p {
 	text-align: center;
 	color: #9b8ec1;
 }
@@ -409,6 +423,7 @@ footer h2 {
 	}
 	
 	.section-title {
+		position: relative;
 		padding-bottom: 255px;
 		padding-left: 6.25%;
 		padding-top: 5px;
@@ -422,13 +437,13 @@ footer h2 {
 		background-position-x: 50%;
 	}
 
-	.athlets .section-title::after {
-		top: 70px;
+	.athlets .section-title::after { 
+		bottom: -35px;
 		background-image: url("../images/img/footballer_192.png");		
 	}
 	
 	.players .section-title::after {
-		top: 60px;
+		bottom: -20px;
 		background-image: url("../images/img/basketballer_302.png");
 	}
 	
@@ -465,8 +480,15 @@ footer h2 {
 		font-weight: 700;
 		top: -3px;
 		left: 0;
-		border-bottom-width: 4px;
+	}
+
+	.article-title::after {
+		width: 15px;
+		height: 4px;
+		top: 14px;
+		left: 0;
 		border-radius: 2px;
+		background-color: #5e42b0;
 	}
 		
 	.activity .article-content {
@@ -483,15 +505,15 @@ footer h2 {
 	}
 	
 	.activity .article-title::before{
-		top: -70px;
-		left: 25px;
-	}
-	
-	.activity .article-title::after{
 		width: 70px;
 		height: 70px;
 		top: -95px;
 		left: 0;
+	}
+	
+	.activity .article-title::after{
+		top: -50px;
+		left: 27px;
 	}
 
 	.button-logo {
@@ -522,7 +544,7 @@ footer h2 {
 		font-weight: 700;
 	}
 	
-	.page-footer h3 {
+	.head-form p {
 		font-size: 1.75rem;
 	}
 }
@@ -569,10 +591,13 @@ footer h2 {
 	}
 
 	.article-title {
-		padding-bottom: 20px;
 		padding-left: 30px;
     font-size: 32px;
     letter-spacing: 2px;
+	}
+
+	.article-description {
+		padding-top: 20px;
 	}
 
 	.article-title::before {
@@ -583,6 +608,14 @@ footer h2 {
 		letter-spacing: 0;
 		line-height: 22px;
 		border-bottom-width: 5px;
+	}
+
+	.article-title::after {
+		width: 18px;
+		height: 4px;
+		border-radius: 2px;
+		bottom: 0;
+		left: 0;
 	}
 
 	.feature {
@@ -628,29 +661,33 @@ footer h2 {
 		padding-top: 35px;
 		padding-bottom: 98px;
 		padding-left: 32px;
+
+		padding: 4.6% 4.2% 12.8% 4.2%;
 		font-size: 24px;
 		line-height: 28px;
 	}
 	
 	.activity .article-title {
-		padding-top: 70px;
-		padding-bottom: 50px;
+		padding-top: 40px;
 		padding-left: 0;
-		font-size: 80px;
+		font-size: calc(80px + 10 * (100vw - 768px) / 127);
+		line-height: calc(88px + 11 * (100vw - 768px) / 127);
 	}
 
 	.activity .article-title::before{
+		width: 120px;
+		height: 120px;
 		line-height: 34px;
 		font-size: 24px;
-		top: -82px;
-		left: 46px;
+		top: -118px;
+		left: 0;
 	}
 	
 	.activity .article-title::after{
-		width: 120px;
-		height: 120px;
-		top: -118px;
-		left: 0;
+		width: 25px;
+		height: 5px;
+		top: -40px;
+		left: 46px;
 	}
 
 	.page-footer {
@@ -668,7 +705,7 @@ footer h2 {
 		letter-spacing: 4px;
 	}
 	
-	.page-footer h3 {
+	.head-form p {
 		font-size: 2.25rem;
 		font-weight: 400;
 	}
@@ -678,7 +715,7 @@ footer h2 {
 
   .page-header,
   .page-footer {
-    max-height: 960px;
+		min-height: 960px;
   }
 
 	.page-header {
@@ -757,9 +794,12 @@ footer h2 {
 
 	.article-title {
 		padding-left: 30px;
-		padding-bottom: 20px;
     font-size: 36px;
     letter-spacing: 2px;
+	}
+
+	.article-description {
+		padding-top: 20px;
 	}
 
 	.article-title::before {
@@ -770,6 +810,14 @@ footer h2 {
 		letter-spacing: 0;
 		line-height: 22px;
 		border-bottom-width: 5px;
+	}
+
+	.article-title::after {
+		width: 20px;
+		height: 5px;
+		border-radius: 3px;
+		bottom: 0;
+		left: 0;
 	}
 
 	.feature {
@@ -822,7 +870,7 @@ footer h2 {
 	}
 
 	.activity .article-content {
-		padding-left: 6.25%;
+		padding: 2% 3.75% 2% 6.25%;
 		font-size: 24px;
 		line-height: 28px;
 	}
@@ -830,31 +878,38 @@ footer h2 {
 	.activity .article-title {
 		position: static;
 		padding-left: 0;
-		padding-bottom: 6.25%;                        
+		padding-bottom: 0;                       
 		font-size: calc(80px + 40 * (100vw - 1920px) / 1152);
-		line-height: 88px;
+		line-height: calc(80px + 40 * (100vw - 1920px) / 1152);
 		color: rgba(193, 193, 193, 0.4)
 	}
 
+	.activity .article-description {
+		padding-top: 6.25%; 
+	}
+
 	.activity .article-title::before {
+		width: 8.1vw;
+		max-width: 170px;
+		height: 8.1vw;
+		max-height: 170px;
+		top: 30%;
+		left: 45.95%;
+		display: flex;
 		line-height: 34px;
 		font-size: 24px;
-		top: calc(43% - 17px);
-		left: calc(50% - 17px);
+	}
+
+	.activity .article-title::after {
+		width: 28px;
+		height: 6px;
+		top: calc(30% + 4.05vw + 17px);
+		left: calc(50% - 14px);
 	}
 
 	.page-main .activity article img {
 		width: 100%;
 		animation: none;
-	}
-
-	.activity .article-title::after{
-		width: 8.1vw;
-		max-width: 170px;
-		height: 8.1vw;
-		max-height: 170px;
-		top: calc(43% - 10%);
-		left: calc(50% - 8.1% / 2);
 	}
 
 	.page-footer {
@@ -895,7 +950,7 @@ footer h2 {
 		font-weight: 700;
 	}
 	
-	.page-footer h3 {
+	.head-form p {
 		font-size: 30px;
 		text-align: start;
 	}
@@ -924,6 +979,11 @@ footer h2 {
 	.players .section-title::after {
 		background-position-x: 42px;
 		background-size: 1050px;
+	}
+
+	.activity .article-title::after {
+		top: calc(30% + 100px);
+		left: calc(50% - 20px);
 	}
 }
 
