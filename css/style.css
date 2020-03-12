@@ -196,7 +196,7 @@ article {
 
 .button-logo {
 	border-radius: 23%;
-	flex-shrink: 0;
+    flex-shrink: 0;
 }
 
 .button {
@@ -333,7 +333,8 @@ section,
 }
 
 .page-footer .wrapper {
-	flex-basis: 36.2vh;
+    flex-basis: 36.2vh;
+    margin-bottom: 10px;
 }
 
 .page-footer h2 {
