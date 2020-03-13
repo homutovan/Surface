@@ -53,7 +53,7 @@ img {
 	height: auto;
 	transition-timing-function: ease;
 	transition-duration: 2s;
-	transition-property: transform;
+    transition-property: transform;
 }
 
 .activity article:nth-child(odd) img {
