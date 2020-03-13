@@ -16,7 +16,12 @@
   font-style: normal;
 }
 
-* {
+.svg-defs {
+    display: none;
+}
+
+body,
+body * {
 	display: block;
 	box-sizing: border-box;
 	margin: 0;
@@ -36,10 +41,6 @@ html {
 * ::after {
 	position: absolute;
 	pointer-events: none;
-}
-
-title {
-	display: none;
 }
 
 body {
